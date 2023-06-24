@@ -1,0 +1,27 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "allfather"
+version = "0.1.0"
+description = ""
+authors = ["Itzik <itzik1058@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+allfather = "allfather.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+poetry = "^1.5.1"
+black = "^23.3.0"
+ruff = "^0.0.275"
+mypy = "^1.4.0"
+pre-commit = "^3.3.3"
