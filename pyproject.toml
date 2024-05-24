@@ -14,7 +14,7 @@ authors = [
 maintainers = [
     { name = "Itzik", email = "74200683+itzik1058@users.noreply.github.com" },
 ]
-dependencies = ["aiogram"]
+dependencies = ["aiogram", "google-generativeai"]
 dynamic = ["version"]
 
 [project.optional-dependencies]
@@ -25,3 +25,7 @@ allfather = "allfather.main:main"
 
 [tool.hatch.version]
 path = "allfather/__init__.py"
+
+[[tool.mypy.overrides]]
+module = "google.*"
+ignore_missing_imports = true
