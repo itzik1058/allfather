@@ -1,0 +1,10 @@
+services:
+  allfather:
+    image: allfather
+    container_name: allfather
+    build:
+      context: .
+    environment:
+      BOT_TOKEN: ${BOT_TOKEN:?}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:?}
+    restart: unless-stopped
